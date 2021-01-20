@@ -1,0 +1,115 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Simple Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                      
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      nom
+                                  </th>
+                                  <th>
+                                      prenom
+                                  </th>
+                                  <th>
+                                      email
+                                  </th>
+                                  
+                              </thead>
+                              <tbody >
+                                  <tr *ngFor="let items of menus">
+                                      <td>
+                                          {{items.id}}
+                                      </td>
+                                      <td>
+                                         {{items.nom}}
+                                      </td>
+                                      <td>
+                                          {{items.prenon}}
+                                      </td>
+                                      <td>
+                                          {{items.email}}
+                                      </td>
+                                      
+                                      <td><button (click)="deleteoffre(items.id)" class="btn btn-danger">Delete</button>
+                                        <button (click)="OffreDetails(items.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                                        <button (click)="offreupdates(items.id)" class="btn btn-danger">update</button>
+                                    </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+              <div class="card card-plain">
+                  <div class="card-header card-header-danger">
+                      
+                  </div>
+                  <div class="card-body">
+                    <div class="container">
+                        <div class="row">    
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" [(ngModel)]="name" name="offre" placeholder="Search term...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" (click)="clickme(name)" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                prenom
+                            </th>
+                            <th>
+                                email
+                            </th>
+                            
+                        </thead>
+                        <tbody >
+                            <tr *ngFor="let items of f">
+                                <td>
+                                    {{items.id}}
+                                </td>
+                                <td>
+                                   {{items.nom}}
+                                </td>
+                                <td>
+                                    {{items.prenom}}
+                                </td>
+                                <td>
+                                    {{items.email}}
+                                </td>
+                                
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

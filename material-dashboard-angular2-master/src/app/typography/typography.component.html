@@ -1,0 +1,33 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">offer Details</h4>
+            <p class="card-category"></p>
+        </div>
+        <div class="card-body" *ngIf="offers">
+           
+            <div id="typography" >
+                <div class="card-title">
+                    <h2>offer Details</h2>
+                   
+                </div>
+                <div class="row">
+                    <div class="tim-typo">
+                        <h1>
+                            <span class="tim-note">name of offers</span>{{offers.nom}}</h1>
+                    </div>
+                    <div class="tim-typo">
+                        <h2>
+                            <span class="tim-note">name of enterprise</span>{{offers.prenom}}</h2>
+                    </div>
+                    <div class="tim-typo">
+                        <h3>
+                            <span class="tim-note">Place</span>{{offers.email}}</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
